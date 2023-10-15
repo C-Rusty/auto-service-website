@@ -1,0 +1,32 @@
+@import './../global/general';
+
+.day-records {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 5rem;
+
+    width: 100%;
+    
+    gap: 2rem;
+
+    &__date {
+        font-weight: bold;
+    }
+
+    &__records {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5rem;
+
+        width: 100%;
+
+        .day-records-none {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}

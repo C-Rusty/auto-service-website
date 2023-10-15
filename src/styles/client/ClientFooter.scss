@@ -1,0 +1,73 @@
+@import './../global/general';
+
+footer {
+    background: $bg-even;
+    color: $text-color;
+    
+    .footer-inner {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media screen and  (max-width: 991px) {
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .no-wrap {
+            white-space: nowrap;
+
+            @media screen and (max-width: 768px) {
+                white-space: pre-wrap;
+            }
+        }
+
+        &__item {
+            max-width: 25%;
+
+            @media screen and  (max-width: 768px) {
+                max-width: 100%;
+            }
+
+            .headline-inner {
+                margin-bottom: 1rem;
+            }
+
+            .links-inner {
+                display: inline-flex;
+                align-items: center;
+                gap: .5rem;
+            }
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+                transition: all 0.1s ease-out;
+
+                &:hover {
+                    color: $hover-color;
+                }
+            }
+
+
+        };
+
+        .footer-contact-us {
+            .links-inner {
+                &:hover {
+                    svg {
+                        fill: $hover-color;
+                    }
+
+                    a {
+                        color: $hover-color;
+                    }
+                }
+            }
+        }
+    }
+}

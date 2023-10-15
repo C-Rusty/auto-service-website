@@ -1,0 +1,118 @@
+@import './../../global/general';
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $bg-even;
+
+    margin-top: 3rem;
+
+    .form-header {
+        text-align: center;
+        color: $text-color;
+
+        margin-bottom: 2rem;
+    }
+
+    .form-container {
+        max-width: 40%;
+
+        form {
+            background-color: $bg-even;
+            color: $text-color;
+
+            display: grid;
+            gap: 1rem;
+            
+            min-width: 25rem;
+            max-height: max-content;
+
+            border: 1px solid;
+
+            padding: 1rem;
+
+            @media screen and (max-width: 576px) {
+                 min-width: 20rem;
+            }
+
+            .label-container, .textarea-container {
+                display: grid;
+                gap: .2rem;
+
+                :first-child {
+                    margin-bottom: .2rem;
+                }
+            }
+            
+            .name-inner, .phone-inner, .time-label, .car-inner, .textarea-container {
+                input, textarea, select {
+                    border: 1px solid black;
+                    border-radius: 4px;
+                    padding-left: 14px;
+                }
+
+                input, select {
+                    min-height: 2rem;
+                }
+            }
+
+                .date-picker {
+                    .MuiInputBase-root {
+                        font-family: 'Roboto Thin' !important;
+                        
+                        color: black;
+
+                        border-color: black;
+                        max-height: 2rem;
+                        background-color: $bg-odd;
+
+                        padding-top: 0.35rem;
+                    }
+
+                    input {
+                        font: initial;
+                    }
+
+                    *  {
+                        border-color: black;
+                    }
+                }
+
+            textarea {
+                resize: vertical;
+                min-height: 5rem;
+            }
+
+            .btn-container {
+                width: 50%;
+                display: inline-flex;
+                justify-self: center;
+
+                button {
+                    width: 100%;
+
+                    border: 1px solid black;
+                    border-radius: 4px;
+                    padding: .3rem;
+
+                    background-color: $hover-color;
+                    border-color: $hover-color;
+                    transition: all 0.3s ease-out;
+                    color: $text-color;
+
+                    text-transform: uppercase;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $hover-color;
+                        border-color: $hover-color;
+                        transition: all 0.3s ease-out;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

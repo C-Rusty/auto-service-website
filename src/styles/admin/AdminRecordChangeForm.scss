@@ -1,0 +1,107 @@
+@import './../global/general';
+
+@mixin btn {
+    padding: .5rem;
+    width: 100%;
+
+    transition: all 0.3s ease-out;
+
+    color: $text-color;
+
+    &:hover {
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        scale: 1.1;
+    }
+}
+
+.record-item-change-form {
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+
+    transition: .5s ease-in;
+
+    background-color: $bg-even;
+    color: $text-color;
+    
+    .form-change {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+
+        border: none;
+        color: $text-color;
+
+        &__label {
+            :first-child {
+                margin-bottom: .5rem;
+            }
+
+            .phone-input {
+                input {
+                    margin-bottom: 0;
+                }
+                .flag-dropdown  {
+                    display: none;
+                }
+            }
+        }
+
+        &__btns-container {            
+            .btn-green, .btn-red {
+                button {
+                    @include btn;
+                }
+            }
+            
+            .btn-green {
+                margin-bottom: 1rem;
+
+                button {
+                    background-color: #00916E;
+                }
+            }
+    
+            .btn-red {
+                button {
+                    background-color: #B80C09; 
+                }
+            }
+        }
+
+        .btns-change__container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            height: 3rem;
+
+            div {
+                width: 48%;
+            }
+        }
+
+        input, textarea, select {
+            border: 1px solid black;
+            border-radius: 4px;
+            padding-left: 14px;
+            min-height: 2rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .apply-selection {
+            background-color: #00916E;
+            color: $text-color;
+
+            &:active {
+                transition: ease-in .1s;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+$bg-even: #223843;
+$bg-odd: #FFFFFF;
+$text-color: #FCF7F7;
+
+$hover-color: #E98A15;
+
+@mixin links {
+    a {
+        text-decoration: none;
+        color: $text-color;
+        transition: all 0.3s ease-out;
+
+        &:hover {
+            color: $hover-color;
+            transition: all 0.3s ease-out;
+        }
+    }
+}

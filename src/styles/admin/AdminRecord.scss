@@ -1,0 +1,62 @@
+@import './../global/general';
+
+@mixin btn {
+    padding: .5rem;
+
+    transition: all 0.3s ease-out;
+
+    color: $text-color;
+
+    &:hover {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        scale: 1.1;
+    }
+}
+
+.record-item {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+
+    min-width: 15rem;
+    max-height: 30rem;
+    
+    background-color: $bg-even;
+    color: $text-color;
+
+    transition: .5s ease-in;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        row-gap: 1rem;
+
+        .records-props {
+            :first-child {
+                margin-bottom: .5rem;
+            }
+
+            :nth-child(2) {
+                margin-bottom: .2rem;
+            }
+        }
+
+        .submit-btn {
+            button {
+                background-color: #00916E;
+                @include btn;
+            }
+        }
+
+        .delete-btn {
+            button {
+                background-color: #B80C09; 
+                @include btn;
+            }
+        }
+    }
+}

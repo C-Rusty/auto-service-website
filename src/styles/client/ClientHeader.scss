@@ -1,0 +1,115 @@
+@import './../global/general';
+
+header {
+  text-transform: uppercase;
+  max-width: 100%;
+
+  background-color: $bg-even;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      row-gap: .8rem;
+      padding: 0;
+    }
+
+    &__logo-container {
+      max-width: 10rem;
+
+      @media screen and (max-width: 768px) {
+        max-width: 25rem;
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+          margin-right: 2rem;
+
+          @media screen and (max-width: 450px) {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      svg {
+        fill: $text-color;
+      }
+
+      .client-phone-mobile {
+        display: none;
+
+        @media screen and (max-width: 768px) {
+          display: flex;
+          padding-top: 0.15rem;
+        }
+        @media screen and (max-width: 450px) {
+          width: max-content;
+        }
+      }
+    }
+
+    &__nav {
+      max-width: 80%;
+
+      @media screen and (max-width: 450px) {
+        max-width: max-content;
+      }
+
+      ul {
+        min-width: max-content;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2rem;
+        list-style-type: none;
+
+        li {
+          max-width: max-content;
+          
+          @media screen and (max-width: 991px) {
+            max-width: min-content;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .client-phone {
+      max-width: max-content;
+      text-align: end;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+
+      a {
+        width: 100%;
+      }
+    }
+
+    //common styles
+    a, span {
+      text-decoration: none;
+      color: $text-color;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        color: $hover-color;
+        cursor: pointer;
+        transition: all 0.1s ease-out;
+      }
+    }
+  }
+}

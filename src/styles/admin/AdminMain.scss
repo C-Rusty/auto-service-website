@@ -1,0 +1,36 @@
+@import './../global/general';
+@import '../global/_general.scss';
+
+.admin-container {
+    width: 100%;
+    height: 100%;
+
+    .admin-container-auth {
+        width: 100%;
+        height: 100%;
+    }
+
+    .header, .day-records, .dates {
+        padding: 1rem 3rem;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 1.5rem;
+
+        background-color: $bg-even;
+
+        a {
+            display: flex;
+            align-items: center;
+        }
+
+        svg {
+            fill: $bg-odd;
+        }
+    }
+}

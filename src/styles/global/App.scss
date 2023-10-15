@@ -1,0 +1,54 @@
+@keyframes showForm {
+  0% {
+      top: -200px;
+  }
+  100% {
+      top: 0px;
+  }
+}
+
+body {
+  .App {
+
+    height: 100%;
+    
+    header, footer {
+      margin: auto;
+      padding: 1rem 3rem;
+      
+      @media screen and (max-width: 768px) {
+        padding: 1.3rem 2rem;
+      }
+    }
+
+    section {
+      padding: 5rem 3rem;
+    }
+    
+    .admin-NotAuth-container {
+      width: 100%;
+    }
+    
+    .show-form {
+      position: relative;
+      z-index: 0;
+      animation: showForm .4s ease-in-out;
+    }
+
+    .hide-form {
+      display: none !important;
+    }
+  }
+}
+  
+input, select, textarea, button, form {
+  border: 1px solid #383F51;
+  border-radius: 5px;
+  color: black;
+  width: 100%;
+  padding: 0.5%;
+}
+
+img {
+  border-radius: 1rem;
+}
